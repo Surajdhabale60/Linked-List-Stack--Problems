@@ -10,9 +10,6 @@ namespace LinkedList
     internal class LinkedList
     {
         internal Node head;
-        /// <Summary>
-        /// UC-1
-        /// <param name="data"></param>
         internal void Add(int data)
         {
             Node node = new Node(data);
