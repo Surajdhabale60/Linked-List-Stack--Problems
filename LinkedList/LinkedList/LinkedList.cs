@@ -31,6 +31,25 @@ namespace LinkedList
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
+        /// <summary>
+        /// UC-2
+        /// </summary>
+        /// <param name="data"></param>
+        internal void AddInReverseOrder(int data) //70, 30, 56
+        {
+            Node newNode = new Node(data);
+            if (this.head == null)
+            {
+                this.head = newNode;
+            }
+            else
+            {
+                Node temp = this.head;
+                head = newNode;
+                head.next = temp;
+            }
+
+        }
         internal void Display()
         {
             Node temp = this.head;
