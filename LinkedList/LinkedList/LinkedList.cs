@@ -76,6 +76,16 @@ namespace LinkedList
             prev.next = newestNode;
             return this.head;
         }
+        internal void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            this.head = this.head.next;
+            return;
+        }
         internal void Display()
         {
             Node temp = this.head;
