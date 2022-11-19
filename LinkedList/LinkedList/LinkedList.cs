@@ -10,9 +10,6 @@ namespace LinkedList
     internal class LinkedList
     {
         internal Node head;
-        /// <Summary>
-        /// UC-1
-        /// <param name="data"></param>
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -31,10 +28,6 @@ namespace LinkedList
             }
             Console.WriteLine("{0} inserted into linked list", node.data);
         }
-        /// <summary>
-        /// UC-2
-        /// </summary>
-        /// <param name="data"></param>
         internal void AddInReverseOrder(int data) //70, 30, 56
         {
             Node newNode = new Node(data);
