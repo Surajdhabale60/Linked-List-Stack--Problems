@@ -43,7 +43,7 @@ namespace LinkedList
             }
 
         }
-        internal Node InsertAtParticularPosition(int position, int data)
+        internal Node InsertParticularPosition(int position, int data)
         {
             Node newestNode = new Node(data);
             if (this.head == null)
@@ -112,6 +112,32 @@ namespace LinkedList
                 count++;
             }
             return count;
+        }
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+            Node newestNode = new Node(data);
+            if (this.head == null)
+            {
+                return newestNode;
+            }
+            if (position == 0)
+            {
+                newestNode.next = this.head;
+                this.head = newestNode;
+                return this.head;                
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while (current != null && count < position)
+            {
+                prev = current;
+                current = current.next;
+                count++;
+            }
+            newestNode.next = prev.next;
+            prev.next = newestNode;
+            return this.head;
         }
         internal void Display()
         {
