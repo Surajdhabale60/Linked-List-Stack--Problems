@@ -139,6 +139,25 @@ namespace LinkedList
             prev.next = newestNode;
             return this.head;
         }
+        public void DeleteAtParticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+                return;
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+                return;
+            }
+        }
         internal void Display()
         {
             Node temp = this.head;

@@ -25,7 +25,9 @@
             //linkedList.SearchLinkedList(70);
             //Console.WriteLine("Node with value 30 is in LinkedList.");
 
-            linkedList.InsertParticularPosition(2, 40);
+            //linkedList.InsertParticularPosition(2, 40);
+
+            linkedList.DeleteAtParticularPosition(2);
 
 
             linkedList.Display();
